@@ -1,0 +1,22 @@
+<div>
+    <div>
+        <form (submit)="addTodo()">
+            <label for="todoText">Todo Text</label>
+            <input
+                id="todoText" 
+                name="todoText"
+                type="text"
+                placeholder="Enter a todo text..."
+                [(ngModel)]="todoText" />
+
+            <button type="submit">Add Todo</button>
+        </form>
+    </div>
+    
+    <ul>
+        <li *ngFor="let todo of todos">
+            {{todo.text}} => {{todo.completed}}
+            <button (click)="deleteTodo(todo.id)">Del</button>
+        </li>
+    </ul>
+</div>

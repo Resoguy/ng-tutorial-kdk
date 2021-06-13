@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngTutorial';
+  msg = 'My Message';
+  subtitle: string = 'This is a subtitle';
+
+  constructor() {
+
+  }
+
+  changeTitle(event: string) {
+    console.log(event);
+    this.title = 'My New Title';
+  }
 }
